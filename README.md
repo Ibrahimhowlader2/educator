@@ -6,6 +6,3 @@ Smooth scrolling behaviour, yes! The graphics on this website are engaging and t
 ## This is my project link :
 
 Click Here For Live View [Educator Website](https://educator1707.web.app/).
-
-## About This Project :
-
