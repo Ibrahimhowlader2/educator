@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Nunito;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .box-container-grid {
+    display: -ms-grid;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .popular-container-grid-cols {
+    -ms-grid-columns: (minmax(16rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .courses-container-grid-cols {
+    -ms-grid-columns: (minmax(30rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .footer-container-grid-cols {
+    -ms-grid-columns: (minmax(16rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .title {
+    @apply text-center mb-10 text-4xl capitalize text-primaryGray;
+  }
+  .box {
+    @apply flex flex-col items-center py-8 px-6 text-center border-[0.1rem] border-primary bg-red-50 cursor-pointer hover:bg-primary ease-in duration-300;
+  }
+  .btn {
+    @apply inline-block mt-3 py-2 px-6 text-lg border border-primary bg-white text-primary cursor-pointer capitalize hover:bg-primary hover:text-white ease-in duration-300;
+  }
+  /* flex flex-col items-center py-8 px-6 text-center border-[0.1rem] border-primary bg-red-50 cursor-pointer hover:bg-primary ease-in duration-300 group*/
 }
