@@ -4,15 +4,15 @@ import courses from "../coursesData";
 const FamousCourses = () => {
   return (
     <>
-      <section class="container py-20" id="courses">
-        <h1 class="title"> our famous courses </h1>
+      <section className="container py-20" id="courses">
+        <h1 className="title"> our famous courses </h1>
 
-        <div class="box-container-grid courses-container-grid-cols">
+        <div className="box-container-grid courses-container-grid-cols">
           {courses.map((course) => {
             return (
               <>
-                <div class="group">
-                  <div class="image overflow-hidden h-64 relative">
+                <div className="group">
+                  <div className="image overflow-hidden h-64 relative">
                     <img
                       src={course.img}
                       alt=""
@@ -22,7 +22,7 @@ const FamousCourses = () => {
                       {course.courseName}
                     </h3>
                   </div>
-                  <div class="content p-3 text-center border border-primary">
+                  <div className="content p-3 text-center border border-primary">
                     <h3 className="text-lg capitalize text-primaryGray">
                       choose what's best for you!
                     </h3>
@@ -30,17 +30,17 @@ const FamousCourses = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Eaque, odit!
                     </p>
-                    <a href="#/" class="btn">
+                    <a href="#/" className="btn">
                       read more
                     </a>
-                    <div class="icons flex items-center justify-between mt-3 pt-3 border-t border-primary">
+                    <div className="icons flex items-center justify-between mt-3 pt-3 border-t border-primary">
                       <span className="text-lg capitalize text-primaryGray">
                         {" "}
-                        <i class="fas fa-book text-primary pr-1"></i> 12 modules{" "}
+                        <i className="fas fa-book text-primary pr-1"></i> 12 modules{" "}
                       </span>
                       <span className="text-lg capitalize text-primaryGray">
                         {" "}
-                        <i class="fas fa-clock text-primary pr-1"></i> 6 hours{" "}
+                        <i className="fas fa-clock text-primary pr-1"></i> 6 hours{" "}
                       </span>
                     </div>
                   </div>

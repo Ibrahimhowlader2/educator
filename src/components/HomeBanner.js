@@ -16,7 +16,7 @@ const HomeBanner = () => {
                         <div>
                             <h3 className="sm:text-5xl capitalize text-[#eee] leading-normal font-semibold text-3xl">the best courses you will find find here!</h3>
                             <p className="text-lg leading-normal text-[#eee] py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit labore dolore unde, quidem corrupti?</p>
-                            <a href="#/" class="btn">get started</a>
+                            <a href="#/" className="btn">get started</a>
                         </div>
                     </div>
                 </div>
