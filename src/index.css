@@ -4,12 +4,55 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
   html {
     font-family: Nunito;
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
+/* Navbar Responsive Start */
+  @media (max-width: 768px) {
+    #menu-btn {
+      display: inline-block;
+    }
+    .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 0.1rem solid #FD3D57;
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    #menu-btn.fa-times {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .navbar li {
+      width: 100%;
+    }
+    .header .navbar ul li a:hover {
+      background: #FD3D57;
+      color: #000;
+      -webkit-transform: none;
+    }
+  }
+/* Navbar Responsive End */
+
   .box-container-grid {
     display: -ms-grid;
     display: grid;
@@ -35,6 +78,9 @@
   }
   .btn {
     @apply inline-block mt-3 py-2 px-6 text-lg border border-primary bg-white text-primary cursor-pointer capitalize hover:bg-primary hover:text-white ease-in duration-300;
+  }
+  .navLink{
+    @apply text-xl capitalize text-primaryGray p-3 block hover:text-primary ease-out duration-300;
   }
   /* flex flex-col items-center py-8 px-6 text-center border-[0.1rem] border-primary bg-red-50 cursor-pointer hover:bg-primary ease-in duration-300 group*/
 }

@@ -4,17 +4,17 @@ import FamousCourses from '../components/FamousCourses';
 import HomeBanner from '../components/HomeBanner';
 import PopularSubject from '../components/PopularSubject';
 import Footer from '../shared/Footer';
-import Navbar from '../shared/Navbar';
+import Header from '../shared/Header';
 
 const Home = () => {
     return (
         <>
-            <Navbar/>
+            <Header />
             <HomeBanner />
             <PopularSubject />
-            <AboutUs/>
-            <FamousCourses/>
-            <Footer/>
+            <AboutUs />
+            <FamousCourses />
+            <Footer />
         </>
     );
 };

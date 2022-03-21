@@ -1,5 +1,5 @@
 import React from "react";
-import courses from "../coursesData";
+import { coursesData } from '../Data/Data';
 
 const FamousCourses = () => {
   return (
@@ -8,7 +8,7 @@ const FamousCourses = () => {
         <h1 className="title"> our famous courses </h1>
 
         <div className="box-container-grid courses-container-grid-cols">
-          {courses.map((course) => {
+          {coursesData.map((course) => {
             return (
               <>
                 <div className="group">

@@ -1,14 +1,13 @@
 import React from "react";
-import populars from "../popularSubData";
-
+import { popularSubData } from '../Data/Data';
 const PopularSubject = () => {
   return (
     <>
-      <section className="container my-20">
+      <section className="container my-20" id="subject">
         <h1 className="title">our popular subjects</h1>
 
         <div className="box-container-grid popular-container-grid-cols">
-          {populars.map((popular) => {
+          {popularSubData.map((popular) => {
             return (
               <>
                 <div className="box group" key={popular.id}>
