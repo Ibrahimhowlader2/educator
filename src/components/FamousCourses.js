@@ -10,8 +10,7 @@ const FamousCourses = () => {
         <div className="box-container-grid courses-container-grid-cols">
           {coursesData.map((course) => {
             return (
-              <>
-                <div className="group">
+                <div key={course.id} className="group">
                   <div className="image overflow-hidden h-64 relative">
                     <img
                       src={course.img}
@@ -45,7 +44,6 @@ const FamousCourses = () => {
                     </div>
                   </div>
                 </div>
-              </>
             );
           })}
         </div>

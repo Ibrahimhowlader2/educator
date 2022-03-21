@@ -9,8 +9,9 @@ const PopularSubject = () => {
         <div className="box-container-grid popular-container-grid-cols">
           {popularSubData.map((popular) => {
             return (
-              <>
-                <div className="box group" key={popular.id}>
+              <div
+                key={popular.id}
+                className="box group">
                   <img src={popular.img} className="h-32 mb-2" alt="" />
                   <div>
                     <h3 className="text-xl capitalize text-primaryGray py-2 font-semibold  group-hover:text-white ease-in duration-300 group">
@@ -21,7 +22,6 @@ const PopularSubject = () => {
                     </p>
                   </div>
                 </div>
-              </>
             );
           })}
         </div>
